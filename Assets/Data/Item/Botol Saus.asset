@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fb6aecb91e95244812973c8ab0bd2e, type: 3}
+  m_Name: Botol Saus
+  m_EditorClassIdentifier: Assembly-CSharp::SO_ItemsTest
+  itemName: Delmonte
+  description: saosssssss
+  icon: {fileID: 21300000, guid: 9160f2915e5cbb1419880f034505ddd5, type: 3}
+  shelfSprites: []
+  baseSellPrice: 2000

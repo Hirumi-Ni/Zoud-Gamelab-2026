@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df15051042d0754b8a02c133d6fc49e, type: 3}
+  m_Name: Prabowo
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Customer
+  customerSprite: {fileID: 8864572700674745180, guid: 562c9fff4540fba47a339fd030afdf99, type: 3}
+  customerName: Wowok
+  customerDialogue: {fileID: 11400000, guid: b147ee0f2c58c7c47847beb2f6ae5dcc, type: 2}
+  customerPurchaseItem:
+  - {fileID: 11400000, guid: 609152bd9d905784e9d609248529e7b7, type: 2}
+  - {fileID: 11400000, guid: 5ec027faa4bb32241bfc300a7016c0b8, type: 2}
