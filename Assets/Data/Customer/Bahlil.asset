@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df15051042d0754b8a02c133d6fc49e, type: 3}
+  m_Name: Bahlil
+  m_EditorClassIdentifier: Assembly-CSharp::SO_Customer
+  customerSprite: {fileID: -4288344199647211769, guid: 2cda97430cd81d0479d142467df0f730, type: 3}
+  customerName: Bahlil
+  customerDialogue: {fileID: 11400000, guid: ca1858e5bd9e9b04b90260b1dffd6926, type: 2}
+  customerPurchaseItem:
+  - {fileID: 11400000, guid: c6cae0e0ca733bf44a1cdd8b0294e3c3, type: 2}
+  - {fileID: 11400000, guid: 5ec027faa4bb32241bfc300a7016c0b8, type: 2}
+  - {fileID: 11400000, guid: 609152bd9d905784e9d609248529e7b7, type: 2}

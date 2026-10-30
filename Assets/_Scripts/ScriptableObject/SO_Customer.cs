@@ -6,5 +6,6 @@ public class SO_Customer : ScriptableObject
 {
     public Sprite customerSprite;
     public string customerName;
-    public List<string> customerPurchaseItem = new();//sementara ku set string dulu, soalnya SO itemnya/enumnya blom ada
+    public SO_Dialogue customerDialogue;
+    public List<SO_Item> customerPurchaseItem = new();//sementara ku set string dulu, soalnya SO itemnya/enumnya blom ada
 }

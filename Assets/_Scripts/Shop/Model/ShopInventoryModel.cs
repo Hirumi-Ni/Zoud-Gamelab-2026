@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 
@@ -6,39 +5,39 @@ public class ShopInventoryModel
 {
     #region [Dictionaries]
     //sementara stringnya ku jadiin itemnya, ntar ganti ke SO_Item
-    private Dictionary<string, int> stockAmount = new(); //jumlah stock peritem
-    private Dictionary<string, int> sellPrice = new(); //harga jual
+    private Dictionary<SO_Item, int> stockAmount = new(); //jumlah stock peritem
+    private Dictionary<SO_Item, int> sellPrice = new(); //harga jual
     #endregion
 
     #region [Event]
-    public event Action<string> OnStockChanged;
+    public event Action<SO_Item> OnStockChanged;
     #endregion
 
     #region [Getter Setter]
-    public int GetStockCount(string item)
+    public int GetStockCount(SO_Item item)
     {
         return stockAmount.ContainsKey(item) ? stockAmount[item] : 0;
     }
 
-    public int GetSellPrice(string item)
+    public int GetSellPrice(SO_Item item)
     {
-        return sellPrice.ContainsKey(item) ? sellPrice[item] : 0; //0 nya ganti ke harga defaultnya kalo dah ada ScriptableObjectnya, item.BasePrice
+        return sellPrice.TryGetValue(item, out int price) ? price : item.baseSellPrice;
     }
 
-    public void SetSellPrice(string item, int price)
+    public void SetSellPrice(SO_Item item, int price)
     {
         sellPrice[item] = price;
     }
     #endregion
 
     #region [Methods]
-    public void AddStock(string item, int amount) //buat beli stock atau kalo misal pembelinya gak jadi beli itu
+    public void AddStock(SO_Item item, int amount) //buat beli stock atau kalo misal pembelinya gak jadi beli itu
     {
         stockAmount[item] = GetStockCount(item) + amount;
         OnStockChanged?.Invoke(item);
     }
 
-    public bool TakeItem(string item) //ambil item dari rak
+    public bool TakeItem(SO_Item item) //ambil item dari rak
     {
         if (GetStockCount(item) <= 0) return false;
 
@@ -47,8 +46,9 @@ public class ShopInventoryModel
         return true;
     }
 
-    public void ReturnItem(string item)
+    public void ReturnItem(SO_Item item)
     {
         AddStock(item, 1);
     }
+    #endregion
 }
